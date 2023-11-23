@@ -1,0 +1,16 @@
+#include <stdio.h>   // Librería estándar de entrada y salida
+#include <stdlib.h>  // Librería estándar para funciones como srand(), rand(), malloc(), etc.
+#include <time.h>    // Librería para funciones relacionadas con el tiempo
+
+int main() {
+    int filas, columnas;
+
+    // Solicitar al usuario el número de filas y columnas
+    printf("Ingrese el valor para filas: ");
+    scanf("%d", &filas);
+
+    printf("Ingrese el valor para columnas: ");
+    scanf("%d", &columnas);
+
+    int matrix[filas][columnas];
+    int transpuesta[columnas][filas];
