@@ -1,0 +1,3 @@
+#include <stdio.h>   // Librería tipica de toda la vida de entrada y salida
+#include <stdlib.h>  // Librería para crear funciones como srand etc.
+#include <time.h>    // Librería para funciones relacionadas con el tiempo (eso tiene sentido por el nombre)
