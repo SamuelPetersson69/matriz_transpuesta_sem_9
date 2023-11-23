@@ -1,11 +1,11 @@
-#include <stdio.h>   // Librería estándar de entrada y salida
-#include <stdlib.h>  // Librería estándar para funciones como srand(), rand(), malloc(), etc.
-#include <time.h>    // Librería para funciones relacionadas con el tiempo
+#include <stdio.h>   // Librería tipica de toda la vida de entrada y salida
+#include <stdlib.h>  // Librería para crear funciones como srand etc.
+#include <time.h>    // Librería para funciones relacionadas con el tiempo (eso tiene sentido por el nombre)
 
 int main() {
     int filas, columnas;
 
-    // Solicitar al usuario el número de filas y columnas
+    // Solicitar la informacion de toda la vida
     printf("Ingrese el valor para filas: ");
     scanf("%d", &filas);
 
