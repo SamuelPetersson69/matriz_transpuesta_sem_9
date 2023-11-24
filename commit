@@ -1,0 +1,53 @@
+#include <stdio.h>   // Librería tipica de toda la vida de entrada y salida
+#include <stdlib.h>  // Librería para crear funciones como srand etc.
+#include <time.h>    // Librería para funciones relacionadas con el tiempo (eso tiene sentido por el nombre)
+
+int main() {
+    int filas, columnas;
+
+    // solicitar datos de toda la vida.
+    printf("Ingrese el valor para filas: ");
+    scanf("%d", &filas);
+
+    printf("Ingrese el valor para columnas: ");
+    scanf("%d", &columnas);
+
+    int matrix[filas][columnas];
+    int transpuesta[columnas][filas];
+
+    srand(time(NULL)); //esta wea genera numeros aleatorios basado en el tiempo
+
+    // esta wea regula de 0 a 100 los numeros aleatorio en la matriz
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            matrix[i][j] = rand() % 101; // Generar números aleatorios entre 0 y 100
+        }
+    }
+
+    // esta wea solo imprime la matriz normal 
+    printf("Matriz original:\n");
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            printf("%d\t", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    // y esto calcula la transpuesta haciendo algo similar a lo que hizo el teacher de A'[i][j]=A[j][i]
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            transpuesta[j][i] = matrix[i][j];
+        }
+    }
+
+    // y esto imprime esto fue jodido
+    printf("\nMatriz transpuesta:\n");
+    for (int i = 0; i < columnas; i++) {
+        for (int j = 0; j < filas; j++) {
+            printf("%d\t", transpuesta[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
